@@ -12,7 +12,11 @@ function App(props) {
         {props.loading && <div>loading...</div>  }
         {props.smurfs && (
           <div>
-<p>{props.smurfs.data}</p>
+           { console.log('data', props.smurfs)}
+            {props.smurfs.map(smurf => {
+return <p>Name: {smurf.name} | Age: {smurf.age} | Height: {smurf.height}</p> 
+            })}
+
           </div>)}
           
         <button onClick={props.getSmurfs} >Get Smurf List</button>
