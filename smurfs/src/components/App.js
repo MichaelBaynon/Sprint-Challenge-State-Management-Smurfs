@@ -24,7 +24,7 @@ return <p>Name: {smurf.name} | Age: {smurf.age} | Height: {smurf.height}</p>
           
         <button onClick={props.getSmurfs} >Get Smurf List</button>
         <PostForm />
-        <img smurfIMG />
+       <img src={smurfIMG} alt=''/>
       </div>
     );
   }
