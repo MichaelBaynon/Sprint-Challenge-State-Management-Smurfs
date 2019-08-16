@@ -22,6 +22,7 @@ function App(props) {
 
 
 const mapStateToProps = state => {
+  console.log (state.smurfs)
   return {
     smurfs: state.smurfs,
     error: state.error,
