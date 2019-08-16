@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import {connect} from 'react-redux'
 import {getSmurfs} from '../actions'
+import PostForm from './PostForm'
+import smurfIMG from '../imgs/smurf.jpg'
 
 function App(props) {
 
@@ -16,10 +18,13 @@ function App(props) {
             {props.smurfs.map(smurf => {
 return <p>Name: {smurf.name} | Age: {smurf.age} | Height: {smurf.height}</p> 
             })}
+           
 
           </div>)}
           
         <button onClick={props.getSmurfs} >Get Smurf List</button>
+        <PostForm />
+        <img smurfIMG />
       </div>
     );
   }
